@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detailed/detailed",
+    "pages/play/play"
+  ],
+  "window": {
+    "navigationBarTitleText": "Music",
+    "navigationBarBackgroundColor":"#31c27c"
+  }
+}

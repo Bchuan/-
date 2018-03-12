@@ -1,0 +1,79 @@
+page{
+  color: #fff;
+}
+.top{
+  height: 720rpx;
+  width: 100%;
+  border-bottom: 1px solid #cfcfcf;
+  /* background: url("https://y.gtimg.cn/music/photo_new/T002R300x300M000004Lc40p00Xze9.jpg?max_age=2592000") no-repeat; */
+  background-repeat:no-repeat; 
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+}
+.top .title{
+  position: absolute;
+  bottom:0;
+  padding: 0 30rpx;
+  width:92%;
+  height: 280rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(224, 224, 224, 0) 0%,rgba(224, 224, 224, 0.9) 50%, #e0e0e0 100%);
+}
+.top .title .left{
+
+}
+.top .title .left .tit{
+  font-size: 45rpx;
+}
+.top .title .left .time{
+  font-size: 28rpx;
+}
+.top .title .icon_play{
+  background: url("../../img/list_sprite.png") no-repeat 0 0;
+  background-size: 90rpx 220rpx;
+  height: 90rpx;
+  width: 90rpx;
+}
+
+.songlist{
+  /* height: 115rpx; */
+  
+}
+.songlist .song{
+  height: 100%;
+  display: flex;
+}
+.songlist .song .s-left{
+  width: 54rpx;
+  margin: 25rpx 20rpx 0 20rpx;
+  text-align: center;
+  flex: none;
+  font-size: 35rpx;
+}
+.songlist .song .s-right{
+  flex: auto;
+  border-bottom: 1px solid #cfcfcf; 
+}
+.songlist .song .s-right .s-name{
+  font-size: 35rpx;
+  /* margin-top: 20rpx;
+  margin-bottom: 10rpx; */
+  width: 612rpx;
+  margin:20rpx 15rpx 10rpx 0; 
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.songlist .song .s-right .singer{
+  font-size: 25rpx;
+  color: rgba(255,255,255,.6);
+  width: 612rpx;
+  margin-bottom: 20rpx;
+  margin-right: 15rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

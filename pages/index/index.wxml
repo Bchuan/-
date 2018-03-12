@@ -1,0 +1,134 @@
+<view class="nav">
+  <block wx:for="{{navList}}" wx:key="gwe">
+    <text class="{{navcur==index?'cur':''}}" bindtap="navTab" data-id="{{index}}">{{item}}</text>
+  </block>
+</view>
+
+<view class="page01" hidden="{{navcur != 0}}">
+  <swiper class="swiper" indicator-dots="{{true}}" indicator-active-color="red" autoplay="{{true}}" interval="{{5000}}" duration="{{500}}" circular="{{true}}">
+    <block wx:for="{{slider}}" wx:key="ge">
+      <swiper-item>
+        <image src="{{item.picUrl}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="concent">
+    <view class="title">电台</view>
+    <view class="contain">
+      <block wx:for="{{radioList}}" wx:key="ge">
+        <view class="con">
+          <image src="{{item.picUrl}}"></image>
+          <view class="detail">
+            <text>{{item.Ftitle}}</text>
+          </view>
+          <view class="icon_play"></view>
+        </view>
+      </block>
+    </view>
+
+    <view class="title">热门歌单</view>
+    <view class="contain">
+      <block wx:for="{{songList}}" wx:key="ge">
+        <view class="con">
+          <image src="{{item.picUrl}}"></image>
+          <view class="detail">
+            <text>{{item.songListDesc}}</text>
+            <text>{{item.songListAuthor}}</text>
+          </view>
+          <view class="icon_play"></view>
+          <view class="icon_num">
+            <view></view>
+            <text>{{item.accessnum}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="foot">
+    <image src="../../img/logo_footer.png"></image>
+  </view>
+
+</view>
+
+
+
+<view class="page02" hidden="{{navcur != 1}}">
+  <view class="topList" wx:for="{{topList}}" wx:key="ghw" bindtap="inDetal" data-id="{{item.id}}">
+    <view class="list_left">
+      <image src="{{item.picUrl}}"></image>
+      <view class="icon_num1">
+        <view></view>
+        <text>{{item.listenCount}}</text>
+      </view>
+    </view>
+    <view class="list_mid">
+      <view class="mid_title">{{item.topTitle}}</view>
+      <view class="mid_list">
+        <!-- <scroll-view scroll-y lower-threshold="onReachBottom"> -->
+          <view class="songL" wx:for="{{item.songList}}" wx:key="hgf">
+            <view class="text">
+              <text>{{index+1}}</text>
+              <text>{{item.songname}}</text>
+              <text>- {{item.singername}}</text>
+            </view>
+          </view>
+        <!-- </scroll-view> -->
+      </view>
+    </view>
+    <view class="list_right"></view>
+  </view>
+</view>
+
+
+
+<view class="page03" hidden="{{navcur != 2}}">
+  <view class="sear">
+    <input type="search" placeholder="搜索歌曲、歌单" bindconfirm="search" bindfocus="Handle"/>
+    <image src="../../img/search.png"></image>
+    <view class="cancel" bindtap="binCancel" hidden="{{!searchKey}}">取消</view>
+  </view>
+<!--热门搜索  -->
+  <view class="hotsear" hidden="{{searchKey}}" >
+    <view class="hotTitle">热门搜索</view>
+    <view class="hotConcent">
+      <text class="label" bindtap="binLabel" data-id="0">{{special_key}}</text>
+      <text class="label" wx:for="{{hotkey}}" wx:key="gr" bindtap="binLabel" data-id="{{index+1}}">{{item.k}}</text>
+    </view>
+  </view>
+  <view class="shistory" hidden="{{!his}}">
+    <view class="hisItem" wx:for="{{key}}" wx:key="gr">
+      <view class="text">
+        <view class="tiem-left" bindtap="binHist" data-id="{{index}}">
+          <image src="../../img/clock_ic.png"></image>
+          <view>{{item}}</view>
+        </view>
+        <view class="tiem-right" bindtap="delet" data-id="{{index}}"></view>
+      </view>
+    </view>
+    <view class="detel" bindtap="clear">清除记录</view>
+  </view>
+<!-- 搜索列表 -->
+  <view class="searchR" hidden="{{!searchKey}}">
+    <view class="Rlist" wx:for="{{searchList}}" wx:key="fgwe" bindtap="inPlay" data-id="{{index}}">
+      <view class="Rleft">
+        <view class="img"></view>
+      </view>
+      <view class="Rright">
+        <view class="Sname">{{item.songname}}</view>
+        <view class="Singer">{{item.singer[0].name}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="playpage">
+  <image src="../../img/music.png"></image>
+  <view class="song">
+    <view class="songname">{{songPlayingList?songPlayingList[id-1].songname:'剑魂'}}</view>
+    <view class="singer">{{songPlayingList?songPlayingList[id-1].singer[0].name:'梗桔'}}</view>
+  </view>
+  <view class="control">
+    <view class="pl"></view>
+  </view>
+</view>

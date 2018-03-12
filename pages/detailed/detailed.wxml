@@ -1,0 +1,22 @@
+<view class="top" style="background-image:url('{{detal.topinfo.pic_album}}')">
+  <!-- <view class="pic"></view> -->
+  <view class="title" style="background: linear-gradient(to bottom, rgba(224, 224, 224, 0) 0%,{{color}} 60%, {{color}} 100%);">
+    <view class="left">
+      <view class="tit">{{detal.topinfo.ListName}}</view>
+      <view class="time">{{detal.update_time}} 更新</view>
+    </view>
+    <view class="icon_play"></view>
+  </view>
+</view>
+
+<view class="songlist" style="background:{{color}}">
+  <view class="song" wx:for="{{detal.songlist}}" wx:key="fgwe" bindtap="inPlay" data-id="{{index}}">
+    <view class="s-left">{{index+1}}</view>
+    <view class="s-right">
+      <view class="s-name">{{item.data.songname}}</view>
+      <view class="singer">
+        <text wx:for="{{item.data.singer}}" wx:key="gew">/ {{item.name}}</text>
+      </view>
+    </view>
+  </view>
+</view>

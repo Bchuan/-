@@ -1,0 +1,60 @@
+<view class="concent" style="height:{{windowH}}px;">
+  <view class="yin">
+    <view class="song_info">
+      <view class="left">
+        <image src="{{albummid}}"></image>
+        <view class="song">
+          <text>{{song.songname}}</text>
+          <text>{{song.singer[0].name}}</text>
+        </view>
+      </view>
+      <view class="right" bindtap="playMu">
+        <view class="{{off?'pl': 'pa'}}"></view>
+      </view>
+    </view>
+    <view class="song_text">
+
+    </view>
+    <view class="foot">
+      <view class="contrl">
+        <text class="start">0{{currentFen}}:{{currentPosition%60>9?'':'0'}}{{currentPosition%60}}</text>
+        <view class="barPr" bindtouchmove="aheadOrback" bindtouchstart="start" bindtouchend="Mend">
+          <view class="bar">
+            <view class="barP" style="width:{{width}};"></view>
+          </view>
+        </view>
+        <text class="end">0{{duratFen}}:{{duration%60>9?'':'0'}}{{duration%60}}</text>
+      </view>
+      <view class="contrl2">
+        <view class="conLeft"></view>
+        <view class="conMid">
+          <view class="inP">
+            <view class="a"></view>
+            <view class="proS" bindtap="playNe" data-id="-1"></view>
+          </view>
+          <view class="plS" bindtap="playMu">
+            <view class="{{off?'pla': 'pau'}}"></view>
+          </view>
+          <view class="inP">
+            <view class="netS" bindtap="playNe" data-id="1"></view>
+            <view class="a"></view>
+          </view>
+        </view>
+        <view class="conRight" bindtap="ListShow"></view>
+      </view>
+      <view class="logo">
+        <image src="../../img/logo_footer.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="pic" style="background-image:url({{albummid}})"></view>
+  <view class="songlist" animation="{{animationData}}">
+    <scroll-view class="LIST" scroll-y style="height: 603rpx;" bindscrolltoupper="ListNone">
+      <view class="item" wx:for="{{songL}}" bindtap="">
+        <view class="songL {{(inde==index?'cur':'')}}">{{item.data.songname? item.data.songname : item.songname}}</view>
+        <view class="sginerL {{(inde==index?'cur':'')}}">- {{item.data.singer[0].name? item.data.singer[0].name : item.singer[0].name}}</view>
+      </view>
+      <view class="ListNone" bindtap="ListNone">关闭</view>
+    </scroll-view>
+  </view>
+</view>

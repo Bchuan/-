@@ -1,0 +1,426 @@
+page{
+
+}
+.nav{
+  /* height: 80rpx; */
+  display: flex;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #ffffff; 
+  z-index: 20;
+  font-size: 36rpx;
+}
+.nav text{
+  flex: 1;
+  line-height: 80rpx;
+  text-align: center;
+}
+.nav text.cur{
+  color: #31c27c;
+  border-bottom: 4rpx solid #31c27c;
+}
+
+.page01{
+  margin-top: 84rpx;
+  overflow: hidden; 
+  margin-bottom: 120rpx;
+}
+.page01 .swiper swiper-item image{
+  width: 100%;
+}
+.page01 .concent{
+  padding: 0 20rpx;
+  margin-top: 20rpx;
+}
+.page01 .concent .title{
+  font-size: 32rpx;
+  margin: 20rpx 0;
+}
+.page01 .concent .contain{
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+}
+.page01 .concent .contain .con{
+  background: #ffffff;
+  margin-bottom: 20rpx;
+  padding-bottom: 30rpx;
+  position: relative;
+}
+.page01 .concent .contain .con>image{
+  height: 345rpx;
+  width: 345rpx;
+}
+.page01 .concent .contain .con .detail{
+  
+  width: 345rpx;
+}
+.page01 .concent .contain .con .detail text{
+  font-size: 28rpx;
+  line-height: 36rpx;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 5rpx;
+}
+.page01 .concent .contain .con .detail text:nth-child(2){
+  font-size: 24rpx;
+}
+.page01 .concent .contain .con .icon_play{
+  position: absolute;
+  width: 48rpx;
+  height: 48rpx;
+  top: 280rpx;
+  right: 15rpx;
+  background-image: url(../../img/list_sprite.png);
+  background-repeat: no-repeat;
+  background-size: 48rpx 120rpx;
+}
+.page01 .concent .contain .con .icon_num{
+  position: absolute;
+  top: 300rpx;
+  left: 15rpx;
+  color: #ffffff;
+  display: flex;
+  line-height: 20rpx;
+  font-size: 20rpx;
+}
+.page01 .concent .contain .con .icon_num>view{
+  height: 20rpx;
+  width: 20rpx;
+  margin-right: 10rpx;
+  background-image: url(../../img/list_sprite.png);
+  background-repeat: no-repeat;
+  background-size: 48rpx 120rpx;
+  background-position: 0 -100rpx;
+}
+
+.page01 .foot{
+  text-align: center;
+
+}
+.page01 .foot>image{
+  width: 164rpx;
+  height: 48rpx;
+}
+ 
+
+
+.page02{
+  margin-top: 84rpx;
+  overflow: hidden;  
+  margin-bottom: 120rpx;
+}
+.page02 .topList{
+  display: flex;
+  justify-content: space-between;
+  margin: 20rpx 20rpx 0 20rpx;
+  background: #ffffff;
+  position: relative;
+  height: 200rpx;
+}
+.page02 .topList .list_left{
+  flex: none;
+  position: relative;
+  font-size: 24rpx;
+}
+.page02 .topList .list_left>image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.page02 .topList .list_left .icon_num1{
+  position: absolute;
+  bottom: 10rpx;
+  left: 10rpx;
+  color: #ffffff;
+  display: flex;
+  line-height: 20rpx;
+  font-size: 20rpx;
+}
+.page02 .topList .list_left .icon_num1>view{
+  height: 20rpx;
+  width: 20rpx;
+  margin-right: 10rpx;
+  background-image: url(../../img/list_sprite.png);
+  background-repeat: no-repeat;
+  background-size: 48rpx 120rpx;
+  background-position: 0 -100rpx;
+}
+.page02 .topList .list_mid{
+  flex: auto;
+  padding:0 20rpx 0 30rpx; 
+}
+.page02 .topList .list_mid .mid_title{
+  font-size: 32rpx;
+  width: 100%;
+  margin-top: 5rpx;
+  margin-bottom: 5rpx;
+  margin-left: 20rpx;
+}
+.page02 .topList .list_mid .mid_list{
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+
+}
+.page02 .topList .list_mid .mid_list scroll-view{
+  min-height: 20rpx;
+}
+.page02 .topList .list_mid .mid_list .songL{
+  flex: 1;
+  margin-top: 10rpx;
+}
+.page02 .topList .list_mid .mid_list .songL .text{
+  width: 450rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.page02 .topList .list_mid .mid_list .songL .text text{
+  margin-left: 20rpx;
+  color: rgba(0,0,0,.5);
+}
+.page02 .topList .list_mid .mid_list .songL .text text:nth-child(2){
+  color: #010000;
+}
+.page02 .topList .list_right{
+  position: absolute;
+  width: 20rpx;
+  height: 20rpx;
+  border-bottom: 1px solid #9da195;
+  border-right: 1px solid #9da195;
+  top: 50%;
+  right: 15rpx;
+  transform: rotate(-45deg);
+  
+} 
+
+
+ .page03{
+ margin-top: 84rpx;
+ overflow: hidden;
+ margin-bottom: 120rpx;
+}
+
+.page03 .sear{
+  padding: 20rpx;
+  display: flex;
+  position: relative;
+}
+.page03 .sear input{
+  background: #ffffff;
+  flex: auto;
+  padding:20rpx 60rpx;
+  font-size: 28rpx;
+}
+.page03 .sear image{
+  height: 36rpx;
+  width: 36rpx;
+  position: absolute;
+  top: 47rpx;
+  left: 36rpx;
+  z-index: 10;
+}
+.page03 .sear .cancel{
+  font-size: 28rpx;
+  line-height: 93rpx;
+  padding: 0 20rpx;
+} 
+.page03 .hotsear{
+  background: white;
+  width: 100%;
+  overflow: hidden;
+}
+.page03 .hotsear .hotTitle{
+  font-size: 30rpx;
+  margin: 20rpx;
+  line-height: 30rpx;
+}
+.page03 .hotsear .hotConcent{
+  /* width: 100%; */
+  padding: 20rpx;
+  display: flex;
+  /* justify-content: space-between;  */
+  flex-wrap: wrap;
+}
+.page03 .hotsear .hotConcent .label{
+  border-radius:30rpx;
+  display: block;
+  padding: 10rpx 20rpx; 
+  font-size: 28rpx;
+  border: 1px solid #cccccc;
+  margin: 20rpx;
+}
+.page03 .hotsear .hotConcent text:nth-child(1){
+  color: #fc4524;
+  border-color: #fc4524;
+}
+.page03 .shistory{
+
+}
+.page03 .shistory .detel{
+  height: 88rpx;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 28rpx;
+  color: green;
+}
+.page03 .shistory .hisItem{
+  height: 88rpx;
+  padding: 0 20rpx;
+  border-top: 1px solid #e5e5e5;
+}
+.page03 .shistory .hisItem > .text{
+  width:100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.page03 .shistory .hisItem > .text .tiem-left{
+  display: flex;
+  width:690rpx;
+}
+.page03 .shistory .hisItem > .text .tiem-left image{
+  height: 40rpx;
+  width: 40rpx;
+  margin-right: 50rpx;
+  align-self: center;
+}
+.page03 .shistory .hisItem > .text .tiem-left > view{
+  height: 88rpx;
+  font-size: 28rpx;
+  line-height: 88rpx;
+}
+.page03 .shistory .hisItem > .text .tiem-right{
+  height: 40rpx;
+  width: 40rpx;
+  /* margin: 22rpx 0; */
+  align-self: center;
+  position: relative;
+}
+.page03 .shistory .hisItem > .text .tiem-right::after{
+  content: "";
+  height: 28rpx;
+  width: 2rpx;
+  left: 19rpx;
+  top:7rpx;
+  background: #000;
+  transform:rotate(45deg);
+  position: absolute;
+}
+.page03 .shistory .hisItem > .text .tiem-right::before{
+  content: "";
+  height: 28rpx;
+  width: 2rpx;
+  left: 19rpx;
+  top:7rpx;
+  background: #000;
+  transform:rotate(-45deg);
+  position: absolute;
+}
+.page03 .searchR{
+  width: 100%;
+  height: auto;
+}
+.page03 .searchR .Rlist{
+  height: 110rpx;
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  border-top: 1px solid #e5e5e5;
+}
+.page03 .searchR .Rlist .Rleft{
+  height: 100%;
+  width: 110rpx;
+  flex: none;
+}
+.page03 .searchR .Rlist .Rleft .img{
+  height:35%;
+  width:40%;
+  margin: 30rpx;
+  background-image: url(../../img/search_sprite.png);
+  background-repeat: no-repeat;
+  background-size: 44rpx 60rpx;
+}
+.page03 .searchR .Rlist .Rleft image{
+  height: 50%;
+  width: 50%;
+  margin: 30rpx;
+}
+.page03 .searchR .Rlist .Rright{
+  height: 100%;
+  flex: auto;
+}
+.page03 .searchR .Rlist .Rright .Sname{
+  margin: 10rpx 0;
+  width: 630rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 32rpx;
+}
+.page03 .searchR .Rlist .Rright .Singer{
+  font-size: 28rpx;
+  width: 630rpx;
+  color:#cccccc;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+
+.playpage{
+  position: fixed;
+  width: 100%;
+  height: 120rpx;
+  background: rgba(0,0,0,.8);
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.playpage image{
+  height: 80rpx;
+  width: 80rpx;
+  margin: 20rpx 50rpx;
+}
+.playpage > .song{
+
+}
+.playpage  .song > .songname{
+  font-size: 28rpx;
+  width: 400rpx;
+  line-height: 70rpx;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.playpage  .song > .singer{
+  font-size: 24rpx;
+  width: 400rpx;
+  line-height: 35rpx;
+  color: #cccccc;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.playpage .control{
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin: 30rpx 50rpx;
+}
+.playpage .control .pl{
+  height:0;
+  width:0;
+  margin:15rpx 20rpx;
+  border-top:15rpx solid transparent;
+  border-left:15px solid white;
+  border-bottom:15rpx solid transparent;
+}
